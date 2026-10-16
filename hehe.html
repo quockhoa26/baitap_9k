@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Web Xem Hoạt Hình Trực Tuyến</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- 1. HEADER & HEAD-LINK (Header cố định) -->
+    <header class="main-header">
+        <div class="logo">
+            <h2>🎬 HOẠT HÌNH KID</h2>
+        </div>
+        
+        <!-- Ô tìm kiếm theo tên phim -->
+        <div class="search-box">
+            <input type="text" placeholder="Tìm kiếm phim hoạt hình...">
+            <button type="button">Tìm</button>
+        </div>
+
+        <!-- HEAD-LINK: Các liên kết trang -->
+        <nav class="head-link">
+            <ul>
+                <li><a href="#">Trang chủ</a></li>
+                <li><a href="#">Phim mới cập nhật</a></li>
+                <li><a href="#">Xem nhiều nhất</a></li>
+                <li><a href="#">Thể loại</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- 2. CONTENT CONTAINER (Flexbox layout) -->
+    <div class="content-container">
+        
+        <!-- LEFT CONTENT: Menu danh sách video có sẵn -->
+        <aside class="left-content">
+            <h3>Danh Sách Phim</h3>
+            
+            <!-- Bộ lọc sắp xếp -->
+            <div class="filter-box">
+                <label for="sort">Sắp xếp:</label>
+                <select id="sort">
+                    <option value="new">Mới cập nhật</option>
+                    <option value="views">Xem nhiều nhất</option>
+                </select>
+            </div>
+
+            <ul class="video-list">
+                <li class="active">
+                    <a href="#">
+                        <img src="https://via.placeholder.com/120x68?text=Doraemon" alt="Doraemon">
+                        <div>
+                            <h4>Doraemon - Tập Đặc Biệt</h4>
+                            <span>FullHD 1080p | Thuyết minh</span>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="https://via.placeholder.com/120x68?text=Conan" alt="Conan">
+                        <div>
+                            <h4>Thám Tử Lừng Danh Conan</h4>
+                            <span>HD 720p | Thuyết minh</span>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="https://via.placeholder.com/120x68?text=Shin" alt="Shin">
+                        <div>
+                            <h4>Cậu Bé Bút Chì - Shin</h4>
+                            <span>FullHD 1080p | Thuyết minh</span>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="https://via.placeholder.com/120x68?text=Tom+Jerry" alt="Tom & Jerry">
+                        <div>
+                            <h4>Tom & Jerry Classic</h4>
+                            <span>HD 720p | Lồng tiếng</span>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </aside>
+
+        <!-- RIGHT CONTENT: Khu vực phát video -->
+        <main class="right-content">
+            <div class="player-section">
+                <h2>Đang phát: Doraemon - Tập Đặc Biệt</h2>
+                
+                <!-- Nhúng Video bằng thẻ <video> HTML5 -->
+                <div class="video-box">
+                    <h3>1. Phát video qua thẻ &lt;video&gt;</h3>
+                    <video controls width="100%" poster="https://via.placeholder.com/800x450?text=Doraemon+Thumbnail">
+                        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                        Trình duyệt của bạn không hỗ trợ thẻ video.
+                    </video>
+                </div>
+
+                <!-- Nhúng Video bằng thẻ <iframe> YouTube -->
+                <div class="iframe-box">
+                    <h3>2. Nhúng video YouTube qua thẻ &lt;iframe&gt;</h3>
+                    <div class="responsive-iframe">
+                        <iframe 
+                            src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                            title="YouTube video player" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+    </div>
+
+    <!-- 3. FOOTER -->
+    <footer class="main-footer">
+        <p>&copy; 2026 Website Xem Phim Hoạt Hình Trẻ Em. Nội dung đã qua kiểm duyệt - Không quảng cáo.</p>
+    </footer>
+
+</body>
+</html>
